@@ -10,6 +10,8 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import * as colors from '@material-ui/core/colors';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 import rootSaga from '~/controllers/RootSaga';
 import { configureStore } from '~/store/ConfigureStore';
 
@@ -45,6 +47,7 @@ ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <MuiThemeProvider theme={muiTheme}>
+        <CssBaseline />
         <ConnectedRouter history={history}>
           <LangProvider locale={'en'}>
             <Layout>

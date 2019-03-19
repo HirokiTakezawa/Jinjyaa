@@ -6,7 +6,7 @@ export const CHANGE_LOCALE_SAVE_STATE = 'CHANGE_LOCALE_SAVE_STATE';
 const initialState = {
   locale: new Lang({
     code: 'en',
-  }),
+  }).toJS(),
 };
 
 const langState = handleActions(

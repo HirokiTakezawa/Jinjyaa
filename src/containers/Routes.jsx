@@ -11,9 +11,9 @@ const Loading = props => {
   }
 };
 
-// sample
-const Sample = Loadable({
-  loader: () => import('~/containers/sample/AppConnect'),
+// Dashboard
+const Dashboard = Loadable({
+  loader: () => import('~/containers/jinjyaMap/DashboardConnect'),
   loading: Loading,
 });
 
@@ -26,7 +26,7 @@ class Routes extends Component {
     return (
       <div>
         <ConnectedSwitch>
-          <Route exact path="/" component={Sample} />
+          <Route exact path="/" component={Dashboard} />
         </ConnectedSwitch>
       </div>
     );

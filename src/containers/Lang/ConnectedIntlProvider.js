@@ -13,7 +13,7 @@ const changelocale = createSelector(
   [selectLocale],
   locale => {
     if (locale) {
-      let possibleLocale = locale.get('code') || 'en';
+      let possibleLocale = locale.code || 'en';
       addLocaleData(require(`react-intl/locale-data/${possibleLocale}`));
       let messages = require(`../../translations/${possibleLocale}.json`);
 
