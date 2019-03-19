@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    [
+      "react-intl-auto",
+      {
+        "removePrefix": "src/",
+        "filebase": false
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "~": "./src"
+        }
+      }
+    ],
+    ["babel-plugin-redux-saga"]
+  ],
+  "presets": [
+    "react-app"
+  ]
+}
